@@ -1,6 +1,6 @@
-use std::{collections::HashMap, iter};
+use std::collections::HashMap;
 
-use itertools::Itertools;
+
 
 advent_of_code::solution!(1);
 
