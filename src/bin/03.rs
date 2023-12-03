@@ -78,7 +78,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                                     pattern.1.saturating_add(cell_idx.try_into().unwrap()),
                                 )
                             })
-                            .find(|target: &(isize, isize)| {
+                            .any(|target| {
                                 schematic
                                     .schematic
                                     .get(TryInto::<usize>::try_into(max(target.0, 0)).unwrap())
@@ -91,8 +91,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                                             .map(|cell| matches!(cell, &SchematicCell::Symbol(_)))
                                     })
                                     .unwrap_or(false)
-                            })
-                            .is_some();
+                            });
 
                     current_number += 10_u32.pow(current_digit_idx)
                         * num.to_digit(10).expect("Always a valid digit");
@@ -167,7 +166,7 @@ pub fn part_two(input: &str) -> Option<u32> {
                             // Check if near to this gear
                             num.1
                                 .iter()
-                                .find(|loc| {
+                                .any(|loc| {
                                     let dist = (loc.0 as isize - line_idx as isize).pow(2)
                                         + (loc.1 as isize - cell_idx as isize).pow(2);
 
@@ -176,9 +175,8 @@ pub fn part_two(input: &str) -> Option<u32> {
                                         return true;
                                     }
 
-                                    return false;
+                                    false
                                 })
-                                .is_some()
                         })
                         .collect_vec();
 

@@ -32,8 +32,7 @@ impl Game {
             .next()
             .expect("Always a game label")
             .split_ascii_whitespace()
-            .skip(1)
-            .next()
+            .nth(1)
             .expect("Always a game id")
             .parse()
             .expect("Always an integer");
@@ -75,7 +74,7 @@ impl Game {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let games = input.lines().map(|line| Game::from_str(line));
+    let games = input.lines().map(Game::from_str);
 
     Some(
         games
@@ -83,8 +82,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                 let possible = game
                     .rounds
                     .iter()
-                    .find(|round| round.red > 12 || round.green > 13 || round.blue > 14)
-                    .is_some();
+                    .any(|round| round.red > 12 || round.green > 13 || round.blue > 14);
 
                 if !possible {
                     game.id
@@ -97,7 +95,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let games = input.lines().map(|line| Game::from_str(line));
+    let games = input.lines().map(Game::from_str);
 
     Some(
         games
