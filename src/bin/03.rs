@@ -164,19 +164,17 @@ pub fn part_two(input: &str) -> Option<u32> {
                         .iter()
                         .filter(|num| {
                             // Check if near to this gear
-                            num.1
-                                .iter()
-                                .any(|loc| {
-                                    let dist = (loc.0 as isize - line_idx as isize).pow(2)
-                                        + (loc.1 as isize - cell_idx as isize).pow(2);
+                            num.1.iter().any(|loc| {
+                                let dist = (loc.0 as isize - line_idx as isize).pow(2)
+                                    + (loc.1 as isize - cell_idx as isize).pow(2);
 
-                                    if dist <= 2 {
-                                        // Nearby!
-                                        return true;
-                                    }
+                                if dist <= 2 {
+                                    // Nearby!
+                                    return true;
+                                }
 
-                                    false
-                                })
+                                false
+                            })
                         })
                         .collect_vec();
 
