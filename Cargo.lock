@@ -11,7 +11,9 @@ dependencies = [
  "itertools",
  "joinery",
  "log",
+ "once_cell",
  "pico-args",
+ "regex",
  "serde",
  "validator",
 ]
