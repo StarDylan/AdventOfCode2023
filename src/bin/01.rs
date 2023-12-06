@@ -19,7 +19,7 @@ pub fn part_one(input: &str) -> Option<u32> {
                     .find(|c| c.is_ascii_digit())
                     .expect("Numeric Char always exist");
 
-                let full_num = String::from_iter(vec![first, last].iter());
+                let full_num = String::from_iter([first, last].iter());
 
                 let parsed_num: u32 = full_num.parse().expect("Number always valid");
 
