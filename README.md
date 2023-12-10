@@ -23,16 +23,17 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---:  |
-| [Day 1](./src/bin/01.rs) | `92.3µs` | `1.1ms` |
-| [Day 2](./src/bin/02.rs) | `43.1µs` | `42.9µs` |
-| [Day 3](./src/bin/03.rs) | `116.1µs` | `7.4ms` |
-| [Day 4](./src/bin/04.rs) | `591.8µs` | `791.2ms` |
-| [Day 5](./src/bin/05.rs) | `14.3µs` | `4.9s` |
-| [Day 6](./src/bin/06.rs) | `326.0ns` | `18.0ms` |
-| [Day 7](./src/bin/07.rs) | `4.7ms` | `110.0ms` |
-| [Day 8](./src/bin/08.rs) | `770.6µs` | `2.1ms` |
+| [Day 1](./src/bin/01.rs) | `80.5µs` | `1.1ms` |
+| [Day 2](./src/bin/02.rs) | `42.4µs` | `41.9µs` |
+| [Day 3](./src/bin/03.rs) | `102.8µs` | `6.7ms` |
+| [Day 4](./src/bin/04.rs) | `569.3µs` | `749.8ms` |
+| [Day 5](./src/bin/05.rs) | `11.7µs` | `4.7s` |
+| [Day 6](./src/bin/06.rs) | `284.0ns` | `17.6ms` |
+| [Day 7](./src/bin/07.rs) | `4.6ms` | `106.9ms` |
+| [Day 8](./src/bin/08.rs) | `860.8µs` | `2.0ms` |
+| [Day 9](./src/bin/09.rs) | `626.9µs` | `624.8µs` |
 
-**Total: 5836.17ms**
+**Total: 5591.66ms**
 <!--- benchmarking table --->
 
 ---
